@@ -12,40 +12,43 @@ let datumsVirkne = datums.getDate()+'.'+datums.getMonth()+'.'+datums.getFullYear
 
 async function iegutDatusNoApi(url)
 {
-  let datiNoServera = await fetch(url);
-  let datiNoServeraJson = await datiNoServera.json();
-  return datiNoServeraJson;
-}
+  let response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('HTTP kļūda! Statuss: ${response.status}');
+  }
+  return await response.json();
+
 
 async function atlasitTop()
 {
-  iegutDatusNoApi('result.json');
+  try {
   let topsJson = await iegutDatusNoApi('topData');
-  console.log(datiJson);
-  for (i=0; i < topsJson.lenght; i++)
-  {
+  console.log('Top dati:',topsJson);
     let tabula = document.querySelector(".tops");
-
-    tabula.innerHTML = tabula.innerHTML+`
-    <tr id="`+topsJson[i]['id']+`">
-      <td> `+topsJson[i]['vards']+` </td>
-      <td> `+topsJson[i]['klikski']+` </td>
-      <td> `+topsJson[i]['laiks']+` </td>
-      <td> `+topsJson[i]['datums']+` </td>
+    topsJson.forEach(ieraksts => {
+      tabula.innerHTML +=`
+      <tr>
+        <td>${ieraksts.vards}</td>
+      <td>${ieraksrts.klikski}</td>
+      <td>${ieraksrts.laiks}</td>
+      <td>${ieraksrts.datums}</td>
     </tr>`;
+      });
+  } catch (e){
+   console.error("Kļūda,iegūstot top datus",e);
   }
-}
+} 
 
-atlasitTop();
+atlasitsTop();
 
 
 function pievienotTop() {
   let tabula = document.querySelector('.tops');
   tabula.innerHTML = tabula.innerHTML +`
     <tr id='jauns'>
-      <td>`+vards+`</td>
-      <td>`+klikski+`</td>
-      <td>`+laiks+`</td>
-      <td>`+datumsVirkne+`</td>
+      <td>+vards+</td>
+      <td>+klikski+</td>
+      <td>+laiks+</td>
+      <td>+datumsVirkne+</td>
     </tr>`;
 }

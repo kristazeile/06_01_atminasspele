@@ -1,30 +1,37 @@
 [
     {
-        "id": 0,
-        "vards": "Juris",
-        "klikski": 47,
-        "laiks": 55,
-        "datums": "2021-12-04"
+        "id": 12,
+        "vards": "Andris",
+        "klikski": 12,
+        "laiks": 6,
+        "datums": "2025-03-05"
     },
     {
-        "id": 1,
-        "vards": "Ansis",
-        "klikski": 38,
-        "laiks": 49,
-        "datums": "2021-12-05"
+        "id": 13,
+        "vards": "Andris",
+        "klikski": 14,
+        "laiks": 7,
+        "datums": "2025-03-05"
+    },
+    {
+        "id": 20,
+        "vards": "kkkk",
+        "klikski": 14,
+        "laiks": 11,
+        "datums": "2025-03-05"
+    },
+    {
+        "id": 19,
+        "vards": "krista",
+        "klikski": 24,
+        "laiks": 23,
+        "datums": "2025-03-05"
     },
     {
         "id": 2,
-        "vards": "Liene",
-        "klikski": 41,
-        "laiks": 40,
-        "datums": "2021-12-07"
-    },
-    {
-        "id": 3,
-        "vards": "Ilze",
-        "klikski": 31,
-        "laiks": 30,
-        "datums": "2021-12-09"
-    }    
+        "vards": "Anonīmais",
+        "klikski": 100,
+        "laiks": 100,
+        "datums": "2020-01-01"
+    }
 ]

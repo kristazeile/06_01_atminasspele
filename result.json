@@ -21,17 +21,17 @@
         "datums": "2025-03-05"
     },
     {
+        "id": 21,
+        "vards": "krista",
+        "klikski": 20,
+        "laiks": 19,
+        "datums": "2025-03-26"
+    },
+    {
         "id": 19,
         "vards": "krista",
         "klikski": 24,
         "laiks": 23,
         "datums": "2025-03-05"
-    },
-    {
-        "id": 2,
-        "vards": "Anonīmais",
-        "klikski": 100,
-        "laiks": 100,
-        "datums": "2020-01-01"
     }
 ]
